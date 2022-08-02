@@ -1,18 +1,140 @@
 /* ------------------------------ */
 /* Custom Property */
 /* ------------------------------ */
+
+/* color */
+:root {
+    /* base */
+    --main-color: #3F3D56;
+    --main-color-lighter: #5F5D77;
+    --sub-color: #E6E6E6;
+    --accent-color: #FFB6B6;
+    /* text */
+    --text-color-base: #333;
+    --text-color-light: #fff;
+    /* background */
+    --background-color-base: #fff;
+    --background-color-dark: var(--main-color);
+    --background-color-light: var(--sub-color);
+    /* button */
+    --button-color-dark: var(--main-color);
+    --button-color-dark-reverse: #fff;
+    --button-color-light: var(--accent-color);
+}
+
+/* container width */
+:root {
+    --width-content: 1200px;
+}
+
+/* font */
+:root {
+    --font-family-base: 
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+}
+
 /* ------------------------------ */
 /* Common */
 /* ------------------------------ */
+
+html {
+    background-color: var(--background-color-base);
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color-base);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: .05rem;
+}
+
+a {
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
 /* ------------------------------ */
 /* Component */
 /* ------------------------------ */
+
+/* button */
+.c-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--button-color-dark);
+    color: var(--text-color-light);
+}
+
 /* ------------------------------ */
 /* Layout */
 /* ------------------------------ */
+
+/* container */
+.l-container {
+    max-width: var(--width-content);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
 /* ------------------------------ */
 /* header */
 /* ------------------------------ */
+
+.header {
+    width: 100%;
+    background-color: var(--background-color-dark);
+}
+
+.header-inner {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    margin-left: auto;
+    color: var(--text-color-light);
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav-item + .header-nav-item {
+    margin-left: 40px;
+}
+
+.header-nav-item {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.header-nav-item--contact .c-btn {
+    width: 200px;
+    background-color: var(--button-color-dark-reverse);
+    color: var(--main-color);
+}
+
+.header-nav-button-icon {
+    height: 1rem;
+    width: auto;
+    margin-left: .5rem;
+    fill: var(--main-color);
+}
+
 /* ------------------------------ */
 /* footer */
 /* ------------------------------ */
