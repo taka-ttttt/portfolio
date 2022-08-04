@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
 
+    <!-- import js -->
+    <script src="js/main.js" defer></script>
+
     <!-- web font -->
     <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
     
@@ -23,8 +26,17 @@
                         <img src="assets/logo/logo.png" alt="logo">
                     </a>
                 </h1>
-                <nav class="header-nav">
+                <!-- hamburger icon -->
+                <div class="ham-btn" id="ham-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="header-nav" id="header-nav">
                     <ul class="header-nav-list">
+                        <li class="header-nav-item header-nav-item--sp-only">
+                            <a href="#">ホーム</a>
+                        </li>
                         <li class="header-nav-item">
                             <a href="#">サービス</a>
                         </li>
